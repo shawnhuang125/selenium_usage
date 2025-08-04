@@ -32,7 +32,7 @@ driver.get("http://192.168.26.134:3484/")
 |By.CLASS_NAME|	用元素的 class 名稱|	"input-field"|	driver.find_element(By.CLASS_NAME, "input-field")|
 |By.TAG_NAME|	用 HTML 標籤名	"input"|	|driver.find_element(By.TAG_NAME, "input")|
 |By.LINK_TEXT|	用超連結文字完全比對|	"點我登入"	|driver.find_element(By.LINK_TEXT, "點我登入")|
-|By.PARTIAL_LINK_TEXT|	用超連結部分文字比對	"登入"|	|driver.find_element(By.PARTIAL_LINK_TEXT, "登入")|
+|By.PARTIAL_LINK_TEXT|	用超連結部分文字比對	|"登入"	|driver.find_element(By.PARTIAL_LINK_TEXT, "登入")|
 |By.CSS_SELECTOR|	用 CSS 選擇器|	"input[name='account']"	|driver.find_element(By.CSS_SELECTOR, "input[name='account']")|
 |By.XPATH|	用 XPath 語法|	"//input[@name='account']"	|driver.find_element(By.XPATH, "//input[@name='account']")|
 - **element可以執行的動作**
