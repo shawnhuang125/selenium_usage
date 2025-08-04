@@ -21,10 +21,9 @@ driver.quit()
 ```
 driver.get("http://192.168.26.134:3484/")
 ```
-- **尋找element1並輸入字串**
+- **尋找element1並執行**
 ```
 [自訂變數] = driver.find_element(By.NAME, "談入name元素的名稱")
-[自訂變數].send_keys("string")
 ```
 |方法|	說明|	範例值|	實際用法範例|
 |--|--|--|--|
@@ -36,3 +35,18 @@ driver.get("http://192.168.26.134:3484/")
 |By.PARTIAL_LINK_TEXT|	用超連結部分文字比對	"登入"|	|driver.find_element(By.PARTIAL_LINK_TEXT, "登入")|
 |By.CSS_SELECTOR|	用 CSS 選擇器|	"input[name='account']"	|driver.find_element(By.CSS_SELECTOR, "input[name='account']")|
 |By.XPATH|	用 XPath 語法|	"//input[@name='account']"	|driver.find_element(By.XPATH, "//input[@name='account']")|
+- **element可以執行的動作**
+```
+[自訂變數].send_keys("string")
+```
+|方法|	功能|	範例|
+|--|--|--|
+|send_keys(text)	|輸入文字|	element.send_keys("admin")|
+|click()	|點擊按鈕、連結、核取框等|	element.click()|
+|clear()	|清除輸入框內容|	element.clear()|
+|get_attribute(name)	|取得元素的屬性值|	element.get_attribute("value")|
+|text	|取得元素的內文字串|	element.text|
+|is_displayed()	|判斷元素是否可見|	element.is_displayed()|
+|is_enabled()	|判斷元素是否可用|	element.is_enabled()|
+|is_selected()	|判斷核取框或選項是否被選取|	element.is_selected()|
+|submit()	|提交 <form> 表單|	element.submit()|
