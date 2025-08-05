@@ -50,3 +50,22 @@ driver.get("http://192.168.26.134:3484/")
 |is_enabled()	|判斷元素是否可用|	element.is_enabled()|
 |is_selected()	|判斷核取框或選項是否被選取|	element.is_selected()|
 |submit()	|提交 <form> 表單|	element.submit()|
+
+### 下拉式選單
+```
+<div class="w-full">
+  <div class="ant-select ...">
+    <div class="ant-select-selector">
+      <!-- 這裡是選單的「輸入/選取」框 -->
+      <span class="ant-select-selection-search">
+        <input type="search" ...>
+      </span>
+      <span class="ant-select-selection-item" title="管理者權限">
+        管理者權限
+      </span>
+    </div>
+  </div>
+</div>
+```
+- 這裡要找尋的元件可以使用`By.CLASS_NAME`
+
